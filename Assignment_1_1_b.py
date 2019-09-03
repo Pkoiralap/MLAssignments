@@ -36,7 +36,7 @@ def trainModel(X,Y, theta_1, theta_2, alpha, acceptance_criteria, max_tries):
 
 
 # model parameters
-num_of_iterations = 10**10
+num_of_iterations = 20
 theta_1 = 0
 theta_2 = 1
 acceptance_criteria = 10**-10
@@ -49,9 +49,9 @@ predicted_y_values = [theta_1_1 * theta_2_1*x for x in X]
 
 # plots
 _, (ax1,ax2) = plt.subplots(2,1, sharex=False, sharey=False)
-ax1.plot(predictedJs_1, label="J value alpha = 0.0001")
-ax1.plot(predictedJs_2, label="J value alpha = 0.005")
-ax1.plot(predictedJs_3, label="J value alpha = 0.001")
+ax1.plot(predictedJs_1, label="J value alpha = 0.0001", linestyle="-")
+ax1.plot(predictedJs_2, label="J value alpha = 0.005", linestyle="-.")
+ax1.plot(predictedJs_3, label="J value alpha = 0.001", linestyle=":")
 ax1.set(xlabel="Iterations", ylabel="J Value")
 
 
